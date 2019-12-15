@@ -1,0 +1,2 @@
+CheckInterval PT30S
+Definitions [{ProcessName:chromedriver,MaxRunTime:PT30M},{ProcessName:notepad,MaxRunTime:PT8H4M15S}]

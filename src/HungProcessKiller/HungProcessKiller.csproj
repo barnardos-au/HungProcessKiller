@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Authors>Neil Dobson</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ServiceStack" Version="5.7.0" />
+      <PackageReference Include="Topshelf" Version="4.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="app.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>app.settings</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="app.settings">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>app.Designer.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+
+</Project>
